@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net46": {
+      "wrappedProject": "../../ImageGenerator/ImageGenerator.csproj",
+      "bin": {
+        "assembly": "../../ImageGenerator/obj/{configuration}/ImageGenerator.dll",
+        "pdb": "../../ImageGenerator/obj/{configuration}/ImageGenerator.pdb"
+      },
+      "dependencies": {
+        "Newtonsoft.Json": "7.0.1"
+      }
+    }
+  }
+}

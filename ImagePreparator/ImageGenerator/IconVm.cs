@@ -2,10 +2,9 @@ using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
-using ImagePreparator.Annotations;
 using Newtonsoft.Json;
 
-namespace ImagePreparator
+namespace ImageGenerator
 {
     [JsonObject]
     public class IconVm : INotifyPropertyChanged
@@ -71,7 +70,6 @@ namespace ImagePreparator
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

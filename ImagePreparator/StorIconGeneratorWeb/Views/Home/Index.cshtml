@@ -1,0 +1,56 @@
+﻿@using StorIconGeneratorWeb.Controllers
+@{
+    ViewBag.Title = "Home Page";
+    var random = DateTime.Now.Ticks;
+}
+
+<div class="row">
+
+    <div class="col-md-6">
+        @if (ViewBag.Original != null)
+        {
+            <h2>Original image</h2>
+            <div align="center" class="img-preview" id="original-container" >
+                <img id="original-image" src="@Url.Content("~/Input/" + ViewBag.Original)" class="img-orig"/>
+
+            </div>
+        }
+        <div>
+            <p class="caption">To pick color from original image click on it</p>
+            <h3>Background color:</h3>
+
+            @using (Html.BeginForm("FileUpload", "Home", FormMethod.Post,
+                new {enctype = "multipart/form-data"}))
+            {
+                <label for="file">Upload Image:</label>
+                <input type="file" name="file" id="file" style="width: 100%;" class="form-inline"/>
+            @*    <input type="submit" value="Upload" class="submit btn form-inline"/>*@
+                <input id="color-picker" type='color' name='color' value='transparent'/>
+                <input type="submit" value="Update images" class="submit btn form-inline"/>
+            }
+
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Previews:</h2>
+
+        @foreach (HomeController.ImageVm imageVm in ViewBag.Images)
+        {
+            <p>
+                <span>@imageVm.Title</span>
+                <div align="center" class="img-preview">
+                    <div class="img-bg" style="background: transparent">
+                        <img src="@Url.Action("Image", new {id = imageVm.Id})"/>
+                    </div>
+                </div>
+            </p>
+        }
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/ultimator.js"></script>
+}
+

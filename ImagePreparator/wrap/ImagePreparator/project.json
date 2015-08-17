@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../ImagePreparator/ImagePreparator.csproj",
+      "bin": {
+        "assembly": "../../ImagePreparator/obj/{configuration}/ImagePreparator.exe",
+        "pdb": "../../ImagePreparator/obj/{configuration}/ImagePreparator.pdb"
+      },
+      "dependencies": {
+        "Extended.Wpf.Toolkit": "2.5",
+        "Newtonsoft.Json": "7.0.1",
+        "WindowsAPICodePack-Core": "1.1.1",
+        "WindowsAPICodePack-Shell": "1.1.1",
+        "WriteableBitmapEx": "1.5.0.0"
+      }
+    }
+  }
+}

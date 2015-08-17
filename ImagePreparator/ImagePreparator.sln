@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImagePreparator", "ImagePreparator\ImagePreparator.csproj", "{66CBC218-7957-4E43-997E-8F2DB401EE91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageGenerator", "ImageGenerator\ImageGenerator.csproj", "{AD529E17-6907-4B1D-9B9E-90D6805163B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorIconGeneratorWeb", "StorIconGeneratorWeb\StorIconGeneratorWeb.csproj", "{55F94EB0-9F8B-4D7D-89B6-B87543112A6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,17 +19,16 @@ Global
 		{66CBC218-7957-4E43-997E-8F2DB401EE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CBC218-7957-4E43-997E-8F2DB401EE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CBC218-7957-4E43-997E-8F2DB401EE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD529E17-6907-4B1D-9B9E-90D6805163B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD529E17-6907-4B1D-9B9E-90D6805163B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD529E17-6907-4B1D-9B9E-90D6805163B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD529E17-6907-4B1D-9B9E-90D6805163B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F94EB0-9F8B-4D7D-89B6-B87543112A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F94EB0-9F8B-4D7D-89B6-B87543112A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F94EB0-9F8B-4D7D-89B6-B87543112A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F94EB0-9F8B-4D7D-89B6-B87543112A6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://gritsenko.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ImagePreparator\\ImagePreparator.csproj
-		SccProjectName1 = ImagePreparator
-		SccLocalPath1 = ImagePreparator
 	EndGlobalSection
 EndGlobal
