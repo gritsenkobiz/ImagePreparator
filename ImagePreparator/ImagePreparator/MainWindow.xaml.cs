@@ -42,6 +42,7 @@ namespace ImagePreparator
                 bm.StreamSource = File.OpenRead(ofd.FileName);
                 bm.EndInit();
                 IconPreview.Source = bm;
+                _iconsGenerator.SourceImage = bm;
             }
 
             UpdateIcons();
@@ -137,6 +138,20 @@ namespace ImagePreparator
 
         private void Scales_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            UpdateIcons();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            foreach (var availableScale in _iconsGenerator.AvailableScales)
+            {
+                availableScale.IsChecked = false;
+            }
+
+            foreach (var scaleVm in _iconsGenerator.AvailableScales.Where(x => (new[] { 80, 100, 140, 180 }).Contains(x.Scale)).ToArray())
+            {
+                scaleVm.IsChecked = true;
+            }
             UpdateIcons();
         }
     }

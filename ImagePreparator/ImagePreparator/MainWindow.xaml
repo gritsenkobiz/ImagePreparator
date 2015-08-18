@@ -40,6 +40,7 @@
             <TextBlock Margin="0,32,0,0">Choose scales:</TextBlock>
             <Button Margin="4" Click="Button_Click_2">Windows phone 8.1</Button>
             <Button Margin="4" Click="Button_Click_3">Windows 10</Button>
+            <Button Margin="4" Click="Button_Click_4">Windows 8.1</Button>
 
             <ListBox x:Name="Scales" SelectionChanged="Scales_SelectionChanged">
                 <ListBox.ItemContainerStyle>

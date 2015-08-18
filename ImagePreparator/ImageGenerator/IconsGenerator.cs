@@ -18,8 +18,10 @@ namespace ImageGenerator
 
         public List<ScaleVm> AvailableScales = new List<ScaleVm>()
         {
+            new ScaleVm(80),
             new ScaleVm(100) {IsChecked = true},
             new ScaleVm(140) {IsChecked = true},
+            new ScaleVm(180),
             new ScaleVm(240) {IsChecked = true},
             new ScaleVm(200),
             new ScaleVm(400),
