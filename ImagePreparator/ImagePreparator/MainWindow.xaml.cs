@@ -110,6 +110,8 @@ namespace ImagePreparator
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            _iconsGenerator.IsWindows81 = false;
+
             foreach (var availableScale in _iconsGenerator.AvailableScales)
             {
                 availableScale.IsChecked = false;
@@ -124,6 +126,8 @@ namespace ImagePreparator
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            _iconsGenerator.IsWindows81 = false;
+
             foreach (var availableScale in _iconsGenerator.AvailableScales)
             {
                 availableScale.IsChecked = false;
@@ -143,6 +147,8 @@ namespace ImagePreparator
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
+            _iconsGenerator.IsWindows81 = true;
+
             foreach (var availableScale in _iconsGenerator.AvailableScales)
             {
                 availableScale.IsChecked = false;

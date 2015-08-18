@@ -16,6 +16,8 @@ namespace ImageGenerator
         public Color Color { get; set; }
         public List<IconVm> Icons { get; set; }
 
+        public bool IsWindows81 { get; set; }
+
         public List<ScaleVm> AvailableScales = new List<ScaleVm>()
         {
             new ScaleVm(80),
@@ -68,11 +70,18 @@ namespace ImageGenerator
                 result.AddRange(GetIcons(50, 50, "StoreLogo"));
                 result.AddRange(GetIcons(24, 24, "BadgeLogo", true));
 
+                if(IsWindows81)
+                {
+                    result.AddRange(GetIcons(70, 70, "SquareLogo70"));
+                    result.AddRange(GetIcons(30, 30, "SquareLogo30"));
+                }
+
                 //                var settings = JsonConvert.SerializeObject(result, Formatting.Indented);
                 //                File.WriteAllText(settingsPath, settings);
             }
             return result;
         }
+
 
         public static void CreateIcon(FrameworkElement element, int width, int height, string path)
         {
